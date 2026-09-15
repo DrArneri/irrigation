@@ -1,0 +1,5 @@
+export {default as Header} from './Header/Header'
+export {default as HomeScreenBottom} from './HomeScreenBottom/HomeScreenBottom'
+export {default as PanelBoard} from './PanelBoard/PanelBoard'
+export {default as HeroSection} from './HeroSection/HeroSection'
+export {default as ProjectInfoTitles} from './ProjectAbout/ProjectInfoTitles'

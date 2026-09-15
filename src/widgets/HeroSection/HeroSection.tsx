@@ -1,6 +1,6 @@
-import Button from "../shared/ui/Button";
+import Button from "../../shared/ui/Button/Button";
 import { motion } from "motion/react";
-export function ButtonSection() {
+export default function HeroSection() {
   const containerVariant = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,12 +19,12 @@ export function ButtonSection() {
   const textArr = ["Полив,", "который", "думает", "за", "вас."];
 
   return (
-    <div className="flex flex-col gap-10 items-center">
+    <div className="flex flex-col gap-5 sm:gap-6 md:gap-8 lg:gap-10 items-center px-4 sm:px-6">
       <motion.h1
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="font-sfprosemi text-[90px]/20 font-bold"
+        className="font-sfprosemi text-[40px]/10 sm:text-[55px]/12 md:text-[70px]/16 lg:text-[90px]/20 font-bold"
       >
         Автополив
       </motion.h1>
@@ -32,7 +32,7 @@ export function ButtonSection() {
         variants={containerVariant}
         initial="hidden"
         animate="visible"
-        className="font-sfpro text-[30px] flex"
+        className="font-sfpro text-lg sm:text-xl md:text-2xl lg:text-[30px] flex"
       >
         {textArr.map((word, index) => {
           return (
@@ -46,7 +46,7 @@ export function ButtonSection() {
           );
         })}
       </motion.div>
-      <motion.div className="flex gap-4">
+      <motion.div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
         <Button variant={"signIn"}>Войти</Button>
         <Button variant={"reg"}>Регистрация</Button>
       </motion.div>

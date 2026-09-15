@@ -1,5 +1,5 @@
 import type { ButtonHTMLAttributes } from "react";
-import { cn } from "../lib/cn";
+import { cn } from "../../lib/cn";
 import { buttonVariants } from "./buttonVariants";
 import type { VariantProps } from "class-variance-authority";
 import { motion, type MotionProps } from "motion/react";
