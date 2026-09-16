@@ -23,7 +23,6 @@ const ProjectInfoTitles = () => {
     }
 
   return (
-    <div>
         <motion.div
             variants={containerVariant}
             initial = 'hidden'
@@ -33,7 +32,6 @@ const ProjectInfoTitles = () => {
             <motion.h1 className="font-sfprosemi font-semibold text-[48px]" variants={childVariantRight} transition={{duration: 0.6, ease:'easeInOut'}}>Спроектировано для простоты.</motion.h1>
             <motion.h1 className="font-sfprosemi font-semibold text-xl text-textgray text-[48px]" variants={childVariantLeft} transition={{duration: 0.6, ease:'easeInOut'}}>Создано для эффективности.</motion.h1>
         </motion.div>
-    </div>
   )
 }
 
