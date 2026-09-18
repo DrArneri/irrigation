@@ -1,9 +1,9 @@
-export type Color = 'red' | 'yellow' | 'green'
-
+export type Color = 'red' | 'yellow' | 'green' | 'blue'
 type DotColors = Record<Color, string>
 
 export const dotColors: DotColors = {
     red: 'bg-panel-red',
     yellow: 'bg-panel-yellow',
-    green: 'bg-panel-green'
+    green: 'bg-panel-green',
+    blue: 'bg-panel-text-blue'
 }

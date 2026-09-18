@@ -6,13 +6,22 @@ import makeBarVariants, { barContainerVariants, scheduleBoardFinalHeight } from 
 export default function IrrigationSchedulePanel(){
   return (
     <motion.div className="bg-schedule-black w-130 h-60 rounded-2xl flex flex-col">
-        <div className="w-full pt-[0.5em] h-12 flex justify-between items-center px-[1.5rem]">
-            <p className="font-sfprop text-sm text-white">График полива</p>
+        <motion.div className="w-full pt-[0.5em] h-12 flex justify-between items-center px-[1.5rem]">
+            <p className="font-sfprop text-m text-white">График полива</p>
             <motion.div className="flex gap-2 items-center">
-                <ColorDot color="green" className="size-3"/>
-                <motion.p className='font-sfprosemi text-sm text-panel-green'>Активен</motion.p>
+                <ColorDot
+                initial={{opacity:1}}
+                whileInView={{opacity:[1, 0, 1]}}
+                transition={{   
+                duration:0.9, ease:'linear', repeat: Infinity}}
+                viewport={{once: true, amount:0.5}}
+                color="green"
+                className="size-3"
+                />
+                <motion.p
+                className='font-sfprosemi text-m text-panel-green'>Активен</motion.p>
             </motion.div>
-        </div>
+        </motion.div>
         <motion.div
         variants={barContainerVariants}
         initial='hidden'
