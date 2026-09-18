@@ -45,7 +45,9 @@ html {
   --color-schedule-black: rgba(29, 29, 31, 1);
   --color-panel-bar-blue: rgba(177, 183, 222, 1);
   --color-technology-card-gray: rgba(40, 40, 40, 1);
-  --color-bg-color: #F3F3F3; 
+  --color-bg-color: #F3F3F3;
+  --color-footer-bg: rgba(29, 29, 31, 1);
+  
   --shadow-panel: 11px 10px 4px 0px rgba(32, 115, 224, 0.15);
   --shadow-panel-card: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
   --shadow-technology-card: -2px 4px 4px 0px rgba(0, 0, 0, 0.25);

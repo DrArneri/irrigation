@@ -31,9 +31,9 @@ const ProjectInfoTitles = ({upperTitle, bottomTitle}: Props) => {
             initial = 'hidden'
             whileInView='visible'
             transition={{duration: 1, ease:'easeInOut'}}
-            className="text-center">
-            <motion.h1 className="font-sfprosemi font-semibold text-[48px]" variants={childVariantRight} transition={{duration: 0.6, ease:'easeInOut'}}>{upperTitle}</motion.h1>
-            <motion.h1 className="font-sfprosemi font-semibold text-xl text-textgray text-[48px]" variants={childVariantLeft} transition={{duration: 0.6, ease:'easeInOut'}}>{bottomTitle}</motion.h1>
+            className="text-center px-4">
+            <motion.h1 className="font-sfprosemi font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[48px]" variants={childVariantRight} transition={{duration: 0.6, ease:'easeInOut'}}>{upperTitle}</motion.h1>
+            <motion.h1 className="font-sfprosemi font-semibold text-xl sm:text-2xl md:text-3xl lg:text-[48px] text-textgray" variants={childVariantLeft} transition={{duration: 0.6, ease:'easeInOut'}}>{bottomTitle}</motion.h1>
         </motion.div>
   )
 }

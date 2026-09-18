@@ -11,7 +11,7 @@ export default function WaterDrop({ top, left, className }: Props) {
   return (
     <motion.img
       src="./drop.svg"
-      className={cn("size-60 sm:size-80 md:size-100 lg:size-120 absolute z-[0]", className)}
+      className={cn("hidden md:block size-60 md:size-80 lg:size-100 xl:size-120 absolute z-[0]", className)}
       style={{ top, left }}
     />
   );

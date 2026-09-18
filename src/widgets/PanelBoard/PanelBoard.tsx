@@ -22,9 +22,9 @@ const PanelBoard = () => {
   const colors: Color[] = ['red', 'yellow', 'green']
 
   return (
-    <motion.div className="w-130 flex flex-col justify-between rounded-3xl overflow-hidden shadow-panel h-60">
-            <div className="w-full h-12 bg-panel-gray flex items-center">
-              <motion.div className="flex gap-2 pl-[1.5rem]"
+    <motion.div className="w-full max-w-[520px] lg:max-w-[520px] flex flex-col justify-between rounded-2xl sm:rounded-3xl overflow-hidden shadow-panel h-48 sm:h-56 md:h-60">
+            <div className="w-full h-10 sm:h-12 bg-panel-gray flex items-center">
+              <motion.div className="flex gap-1.5 sm:gap-2 pl-4 sm:pl-6"
               variants={containerVariant}
               initial='hidden'
               whileInView='visible'>
@@ -32,39 +32,39 @@ const PanelBoard = () => {
                   return <ColorDot key={index} color={c} variants={childVariants}/>
                 })}
               </motion.div>
-              <div className="flex flex-1 justify-center pr-[3rem]">
-                <p className="font-sfpro text-panel-text-gray text-m">панель управления</p>
+              <div className="flex flex-1 justify-center pr-8 sm:pr-12">
+                <p className="font-sfpro text-panel-text-gray text-xs sm:text-sm md:text-base">панель управления</p>
               </div>
-            </div> 
-            <div className="w-full h-full flex gap-4 px-[1rem] items-center">
+            </div>
+            <div className="w-full h-full flex gap-2 sm:gap-3 md:gap-4 px-3 sm:px-4 items-center">
               <PanelCard>
                 <div className="h-1/3">
-                  <p className='font-sfpro text-panel-text-gray text-base text-center pt-[0.5em]'>Статус</p>
+                  <p className='font-sfpro text-panel-text-gray text-xs sm:text-sm md:text-base text-center pt-1 sm:pt-2'>Статус</p>
                 </div>
-                <div className="h-2/3 flex justify-center items-center pb-[2rem]">
-                  <p className="font-sfprosemi text-panel-green text-semibold text-[23px]">Активен</p>
+                <div className="h-2/3 flex justify-center items-center pb-4 sm:pb-8">
+                  <p className="font-sfprosemi text-panel-green text-semibold text-lg sm:text-xl md:text-[23px]">Активен</p>
                 </div>
               </PanelCard>
               <PanelCard>
                 <div className="h-1/3">
-                  <p className='font-sfpro text-panel-text-gray text-base text-center pt-[0.5em]'>Влажность</p>
+                  <p className='font-sfpro text-panel-text-gray text-xs sm:text-sm md:text-base text-center pt-1 sm:pt-2'>Влажность</p>
                 </div>
-                <div className="h-2/3 flex justify-center items-center pb-[2rem]">
-                  <p className="font-sfprosemi text-panel-text-blue text-semibold text-[23px]">69%</p>
+                <div className="h-2/3 flex justify-center items-center pb-4 sm:pb-8">
+                  <p className="font-sfprosemi text-panel-text-blue text-semibold text-lg sm:text-xl md:text-[23px]">69%</p>
                 </div>
               </PanelCard>
               <PanelCard>
                 <div className="h-1/3">
-                  <p className='font-sfpro text-panel-text-gray text-base text-center pt-[0.5em]'>История</p>
+                  <p className='font-sfpro text-panel-text-gray text-xs sm:text-sm md:text-base text-center pt-1 sm:pt-2'>История</p>
                 </div>
                 <motion.div
                 variants={barContainerVariants}
                 initial='hidden'
                 whileInView='visible'
                 viewport={{once: true, amount: 0.3}}
-                className="h-2/3 flex gap-1 items-end justify-center pb-[1rem]">
+                className="h-2/3 flex gap-0.5 sm:gap-1 items-end justify-center pb-2 sm:pb-4">
                   {panelBoardFinalHeight.map((h, index) => {
-                    return <PanelBar key={index} className="w-3 bg-panel-bar-blue" variants={makeBarVariants(h)}/>
+                    return <PanelBar key={index} className="w-2 sm:w-3 bg-panel-bar-blue" variants={makeBarVariants(h)}/>
                   })}
                 </motion.div>
               </PanelCard>
