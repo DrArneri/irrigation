@@ -8,3 +8,5 @@ export {panelBoardFinalHeight, scheduleBoardFinalHeight, default as makeBarVaria
 export {default as TechnologyCard} from './TechnologyCard/TechnologyCard'
 export {default as TechnologyCardStack} from './TechnologyCard/TechnologyCardStack'
 export {technologyArray} from './TechnologyCard/technologyCard.config'
+export {Input} from './Input'
+export {Modal} from './Modal'

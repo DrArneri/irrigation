@@ -1,6 +1,11 @@
 import { motion } from "motion/react";
+type Props = {
+  handleAboutClick: () => void
+  handleTechClick: () => void
+}
+export default function Header({handleAboutClick, handleTechClick}:Props) {
 
-export default function Header() {
+
   return (
     <motion.header
       initial={{ opacity: 0, x: -20 }}
@@ -10,9 +15,9 @@ export default function Header() {
       style={{ top: 0, left: 0 }}
     >
       <nav className="flex text-sm sm:text-base md:text-lg lg:text-xl gap-4 sm:gap-6 md:gap-8 lg:gap-[4rem]">
-        <p className="font-sfpro cursor-pointer">Главная</p>
-        <p className="font-sfpro cursor-pointer">О проекте</p>
-        <p className="font-sfpro cursor-pointer">Технологии</p>
+        <a className="font-sfpro cursor-pointer" >Главная</a>
+        <a className="font-sfpro cursor-pointer" onClick={handleAboutClick}>О проекте</a>
+        <a className="font-sfpro cursor-pointer" onClick={handleTechClick}>Технологии</a>
       </nav>
     </motion.header>
   );
